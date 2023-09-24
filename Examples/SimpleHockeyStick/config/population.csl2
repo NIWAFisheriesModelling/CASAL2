@@ -148,11 +148,10 @@ sigma_r 10
 alpha 1.0
 
 @selectivity chatTANSel #January survey
-type decreasing
-h 10
-l 2
-v 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1
-alpha 0.1
+type hockeystick
+highedge 25
+lowedge 3
+alpha 1.0
 
 @selectivity One
 type constant 

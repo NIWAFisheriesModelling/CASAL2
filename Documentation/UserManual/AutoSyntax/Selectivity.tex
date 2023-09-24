@@ -203,32 +203,6 @@
 \label{syntax:Selectivity-Constant.Mock}
 
 The Constant.Mock type has no additional subcommands.
-\subsubsection{Selectivity of type Decreasing}
-\commandlabsubarg{Selectivity}{type}{Decreasing}.
-\defRef{sec:Selectivity-Decreasing}
-\label{syntax:Selectivity-Decreasing}
-
-\defSub{decreasing\_parameter}{Decreasing parameter}
-\defType{Real number (estimable)}
-\defDefault{0.0}
-
-\defSub{l}{The low value (L)}
-\defType{Non-negative integer}
-\defDefault{No default}
-
-\defSub{h}{The high value (H)}
-\defType{Non-negative integer}
-\defDefault{No default}
-
-\defSub{v}{The v parameter}
-\defType{Vector of real numbers (estimable)}
-\defDefault{No default}
-
-\defSub{alpha}{The maximum value of the selectivity}
-\defType{Real number (estimable)}
-\defDefault{1.0}
-\defLowerBound{0.0 (exclusive)}
-
 \subsubsection{Selectivity of type Double\_Exponential}
 \commandlabsubarg{Selectivity}{type}{Double\_Exponential}.
 \defRef{sec:Selectivity-DoubleExponential}
@@ -369,6 +343,23 @@ The Constant.Mock type has no additional subcommands.
 \defDefault{1.0}
 \defLowerBound{0.0 (inclusive)}
 
+\subsubsection{Selectivity of type Hockey\_Stick}
+\commandlabsubarg{Selectivity}{type}{Hockey\_Stick}.
+\defRef{sec:Selectivity-HockeyStick}
+\label{syntax:Selectivity-HockeyStick}
+
+\defSub{lowedge}{The low edge value}
+\defType{Real number (estimable)}
+\defDefault{No default}
+
+\defSub{highedge}{The high edge value}
+\defType{Real number (estimable)}
+\defDefault{No default}
+
+\defSub{alpha}{The slope of the hockey stick}
+\defType{Real number (estimable)}
+\defDefault{1.0}
+
 \subsubsection{Selectivity of type Increasing}
 \commandlabsubarg{Selectivity}{type}{Increasing}.
 \defRef{sec:Selectivity-Increasing}
@@ -441,6 +432,11 @@ The Constant.Mock type has no additional subcommands.
 \defType{Real number (estimable)}
 \defDefault{1.0}
 \defLowerBound{0.0 (exclusive)}
+
+\defSub{beta}{The minimum age for which the selectivity applies}
+\defType{Real number (estimable)}
+\defDefault{0.0}
+\defLowerBound{0.0 (inclusive)}
 
 \subsubsection{Selectivity of type Logistic\_Producing}
 \commandlabsubarg{Selectivity}{type}{Logistic\_Producing}.

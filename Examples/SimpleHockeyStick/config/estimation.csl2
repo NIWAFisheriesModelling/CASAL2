@@ -32,23 +32,16 @@ lower_bound 10000
 upper_bound 250000
 
 # Estimate Selectivities
-/*@estimate TANSel_low
-parameter selectivity[chatTANSel].l
-lower_bound 1  
-upper_bound 25 
+@estimate TANSel_decreasing
+parameter selectivity[chatTANSel].highedge
+lower_bound   18
+upper_bound  28
 type uniform
 
-@estimate TANSel_high
-parameter selectivity[chatTANSel].h
-lower_bound  5  
-upper_bound 10
-type uniform
-*/
-
-@estimate TANSel_alpha
-parameter selectivity[chatTANSel].alpha
-lower_bound   0.1
-upper_bound  0.5
+@estimate TANSel_decreasing
+parameter selectivity[chatTANSel].lowedge
+lower_bound   1
+upper_bound  10
 type uniform
 
 @estimate eastFSel_mu

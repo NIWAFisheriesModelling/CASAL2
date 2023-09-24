@@ -94,7 +94,6 @@ Correlation_Matrix
 Covariance_Matrix
 DESolver
 Data
-Decreasing
 Default_Reports
 Delta_Diff
 Derived
@@ -116,6 +115,7 @@ Free
 Gamma_Diff
 Hamiltonian_Monte_Carlo
 Hessian_Matrix
+Hockey_Stick
 Increasing
 Independence_Metropolis
 Initialisation_Partition
@@ -242,6 +242,7 @@ b0
 b0_initialisation_phase
 b_max
 base_weight_units
+beta
 burn_in
 by_length
 c
@@ -259,7 +260,6 @@ crossover_probability
 cv
 cv_first
 cv_last
-decreasing_parameter
 delta
 derived_quantities
 derived_quantity
@@ -293,6 +293,7 @@ from
 gradient_step_size
 growth_increment
 h
+highedge
 initial_mortality
 initial_mortality_selectivity
 initialisation_phases
@@ -327,6 +328,7 @@ likelihood_multiplier
 linf
 log_scale
 lognormal_transformation
+lowedge
 lower_bound
 max_age
 max_correlation

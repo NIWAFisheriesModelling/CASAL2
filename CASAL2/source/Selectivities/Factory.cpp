@@ -9,7 +9,7 @@
  *
  * @section DESCRIPTION
  *
- * The time class represents a moment of time.
+ * The time class represents a moment of time
  *
  * $Date: 2008-03-04 16:33:32 +1300 (Tue, 04 Mar 2008) $
  */
@@ -28,9 +28,9 @@
 #include "../Selectivities/Common/CompoundLeft.h"
 #include "../Selectivities/Common/CompoundMiddle.h"
 #include "../Selectivities/Common/CompoundAll.h"
-#include "../Selectivities/Common/Decreasing.h"
 #include "../Selectivities/Common/DoubleNormalPlateau.h"
 #include "../Selectivities/Common/DoubleNormalSS3.h"
+#include "../Selectivities/Common/HockeyStick.h" 
 #include "../Selectivities/Common/Increasing.h"
 #include "../Selectivities/Common/InverseLogistic.h"
 #include "../Selectivities/Common/KnifeEdge.h"
@@ -68,8 +68,6 @@ Selectivity* Factory::Create(shared_ptr<Model> model, const string& object_type,
       result = new CompoundMiddle(model);
     else if (sub_type == PARAM_COMPOUND_ALL)
       result = new CompoundAll(model);
-    else if (sub_type == PARAM_DECREASING)
-      result = new Decreasing(model);
     else if (sub_type == PARAM_DOUBLE_EXPONENTIAL)
       result = new DoubleExponential(model);
     else if (sub_type == PARAM_DOUBLE_NORMAL)
@@ -84,6 +82,8 @@ Selectivity* Factory::Create(shared_ptr<Model> model, const string& object_type,
       result = new InverseLogistic(model);
     else if (sub_type == PARAM_KNIFE_EDGE)
       result = new KnifeEdge(model);
+    else if (sub_type == PARAM_HOCKEYSTICK)
+      result = new HockeyStick(model);
     else if (sub_type == PARAM_LOGISTIC)
       result = new Logistic(model);
     else if (sub_type == PARAM_LOGISTIC_PRODUCING)

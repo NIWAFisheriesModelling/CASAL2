@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : English.h
-// Author      : S.Rasmussen
+// Author      : Scott Rasmussen
 // Date        : 18/07/2008
 // Copyright   : Copyright NIWA Science �2008 - www.niwa.co.nz
 // Description :
@@ -243,8 +243,6 @@
 #define PARAM_DATA_WEIGHT_VALUE                   "data_weight_value"
 #define PARAM_DE_SOLVER                           "de_solver"
 #define PARAM_DEBUG                               "debug"
-#define PARAM_DECREASING                          "decreasing"
-#define PARAM_DECREASING_PARAMETER                "decreasing_parameter"
 #define PARAM_DEFAULT                             "default"
 #define PARAM_DELTA                               "delta"
 #define PARAM_DELTADIFF                           "deltadiff"
@@ -348,9 +346,11 @@
 #define PARAM_H                                   "h"
 #define PARAM_DOUBLE_HALF                         "double_half"
 #define PARAM_HAMILTONIAN                         "hamiltonian"
+#define PARAM_HE                                  "highedge"
 #define PARAM_HEADER                              "header"
 #define PARAM_HEIGHT                              "height"
 #define PARAM_HESSIAN_MATRIX                      "hessian_matrix"
+#define PARAM_HOCKEYSTICK                         "hockeystick"
 #define PARAM_HOKI_PRIOR                          "hoki_prior"
 #define PARAM_HYBRID                              "hybrid"
 #define PARAM_INDIVIDUAL_AGES                     "individual_ages"
@@ -402,6 +402,7 @@
 #define PARAM_LAYER_WIDTH                         "layer_width"
 #define PARAM_LAYERS                              "layers"
 #define PARAM_LBFGS_MAX_SIZE                      "lbfgs_max_size"
+#define PARAM_LE                                  "lowedge"
 #define PARAM_LEAPFROG_DELTA                      "leapfrog_delta"
 #define PARAM_LEAPFROG_STEPS                      "leapfrog_steps"
 #define PARAM_LEFT_MEAN                           "left_mean"

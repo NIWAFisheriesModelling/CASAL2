@@ -1104,14 +1104,6 @@
 \commandlabsubarg{Selectivity}{type}{Constant.Mock}
 
 
-\commandlabsubarg{Selectivity}{type}{Decreasing}
-
-\defSub{decreasing\_parameter}{Decreasing parameter}
-\defSub{l}{The low value (L)}
-\defSub{h}{The high value (H)}
-\defSub{v}{The v parameter}
-\defSub{alpha}{The maximum value of the selectivity}
-
 \commandlabsubarg{Selectivity}{type}{Double\_Exponential}
 
 \defSub{x0}{The X0 parameter}
@@ -1149,6 +1141,12 @@
 \defSub{h}{The high value (H)}
 \defSub{alpha}{The maximum value of the selectivity}
 
+\commandlabsubarg{Selectivity}{type}{Hockey\_Stick}
+
+\defSub{lowedge}{The low edge value}
+\defSub{highedge}{The high edge value}
+\defSub{alpha}{The slope of the hockey stick}
+
 \commandlabsubarg{Selectivity}{type}{Increasing}
 
 \defSub{l}{The low value (L)}
@@ -1172,6 +1170,7 @@
 \defSub{a50}{The a50 parameter}
 \defSub{ato95}{The ato95 parameter}
 \defSub{alpha}{The maximum value of the selectivity}
+\defSub{beta}{The minimum age for which the selectivity applies}
 
 \commandlabsubarg{Selectivity}{type}{Logistic\_Producing}
 

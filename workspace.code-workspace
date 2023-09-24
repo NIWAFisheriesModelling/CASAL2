@@ -26,7 +26,12 @@
       "thread": "cpp",
       "memory_resource": "cpp",
       "memory": "cpp",
-      "vector": "cpp"
+      "vector": "cpp",
+      "optional": "cpp",
+      "istream": "cpp",
+      "ostream": "cpp",
+      "ratio": "cpp",
+      "utility": "cpp"
     }
   }
 }
