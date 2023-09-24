@@ -1,0 +1,11 @@
+#################################################
+## Include the input configuration files required
+#################################################
+
+# Example input configuration file: 
+# Based on a hake assesssment model for the Chatham Rise (HAK4)
+
+!include "config/population.csl2"
+!include "config/reports.csl2"
+!include "config/observation.csl2"
+!include "config/estimation.csl2"

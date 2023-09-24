@@ -1,0 +1,133 @@
+######################################
+## Estimation definition for the model
+######################################
+
+# MPD minimiser
+@minimiser betadiff
+type betadiff
+evaluations 4000
+iterations 1000
+tolerance 1e-7
+active true
+
+# MCMC
+@mcmc mcmc
+type random_walk
+start 0
+# These are unusually short chains provided as an example. In practise,
+# the chain length, burn_in, and keep rate should be much longer
+length 110000
+keep 1000
+step_size 0.02
+adapt_stepsize_at 1000 2000 5000 10000
+proposal_distribution t
+adapt_stepsize_method ratio
+burn_in 10000
+
+# Estimate B0
+@estimate B0
+type uniform_log
+parameter process[Recruitment].b0
+lower_bound 10000
+upper_bound 250000
+
+# Estimate Selectivities
+/*@estimate TANSel_low
+parameter selectivity[chatTANSel].l
+lower_bound 1  
+upper_bound 25 
+type uniform
+
+@estimate TANSel_high
+parameter selectivity[chatTANSel].h
+lower_bound  5  
+upper_bound 10
+type uniform
+*/
+
+@estimate TANSel_alpha
+parameter selectivity[chatTANSel].alpha
+lower_bound   0.1
+upper_bound  0.5
+type uniform
+
+@estimate eastFSel_mu
+parameter selectivity[eastFSel].mu
+lower_bound 1  
+upper_bound 25 
+type uniform
+
+@estimate eastFSel_sl
+parameter selectivity[eastFSel].sigma_l
+lower_bound  1   
+upper_bound 50 
+type uniform
+
+@estimate eastFSel_sr
+parameter selectivity[eastFSel].sigma_r
+lower_bound   1
+upper_bound  200
+type uniform
+
+@estimate westFSel_mu
+parameter selectivity[westFSel].mu
+lower_bound 1  
+upper_bound 25 
+type uniform
+
+@estimate westFSel_sl
+parameter selectivity[westFSel].sigma_l
+lower_bound  1   
+upper_bound 50 
+type uniform
+
+@estimate westFSel_sr
+parameter selectivity[westFSel].sigma_r
+lower_bound   1
+upper_bound  200
+type uniform
+
+# Year class parameters
+@estimate YCS
+parameter process[Recruitment].recruitment_multipliers{1976:2012}
+#YCS_years    1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011
+lower_bound   0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01
+upper_bound    100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100    3    3
+mu               1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1       1    1
+cv             1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1  1.1   1.1  1.1
+type lognormal
+
+# Penalties 
+@penalty CatchMustBeTaken1
+type process
+log_scale True
+multiplier 1000
+
+# Additional Priors
+@additional_prior YCS_average_1
+type vector_average
+parameter process[Recruitment].recruitment_multipliers
+k 1
+multiplier 100
+
+@additional_prior smooth_YCS
+type vector_smoothing
+parameter process[Recruitment].recruitment_multipliers
+r 1
+lower_bound 1
+upper_bound 10
+multiplier 100
+log_scale true
+
+@additional_prior chatTANq
+type lognormal
+parameter catchability[chatTANq].q
+mu 0.16
+cv 0.79
+
+# Profiling
+@profile B0
+parameter process[Recruitment].b0
+steps 5
+upper_bound 10000
+lower_bound 100000

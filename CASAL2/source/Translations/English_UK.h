@@ -243,6 +243,8 @@
 #define PARAM_DATA_WEIGHT_VALUE                   "data_weight_value"
 #define PARAM_DE_SOLVER                           "de_solver"
 #define PARAM_DEBUG                               "debug"
+#define PARAM_DECREASING                          "decreasing"
+#define PARAM_DECREASING_PARAMETER                "decreasing_parameter"
 #define PARAM_DEFAULT                             "default"
 #define PARAM_DELTA                               "delta"
 #define PARAM_DELTADIFF                           "deltadiff"

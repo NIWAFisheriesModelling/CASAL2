@@ -94,6 +94,7 @@ Correlation_Matrix
 Covariance_Matrix
 DESolver
 Data
+Decreasing
 Default_Reports
 Delta_Diff
 Derived
@@ -136,9 +137,11 @@ MCMCCovariance
 MCMCObjective
 MCMCSample
 MPD
+Markovian_Movement
 Maturation
 Mortality
 Multinomial
+Multiple_Constants
 None
 Nop
 Normal
@@ -152,6 +155,7 @@ Orthogonal
 Output_Parameters
 Partition
 Partition_Biomass
+Poisson
 Process
 Process_Removals_By_Age
 Process_Removals_By_Age_Retained
@@ -189,6 +193,7 @@ Tag_By_Age
 Tag_By_Length
 Tag_Loss
 Tag_Recapture_By_Age
+Tag_Recapture_By_Fishery
 Tag_Recapture_By_Length
 Time_Varying
 Transition_Category
@@ -254,6 +259,7 @@ crossover_probability
 cv
 cv_first
 cv_last
+decreasing_parameter
 delta
 derived_quantities
 derived_quantity
@@ -365,6 +371,7 @@ r
 r0
 rates
 recruitment_multipliers
+reporting_rate
 rho
 s
 same
